@@ -1,0 +1,61 @@
+<div class="nav">
+    <div class="flex-row nav-menu">
+        <div class="nav-brand">
+            <a href="#" class="text-gray">Blog</a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="/" class="home">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a href="/articles/about" class="about">About Us</a>
+                </li>
+                <li class="nav-link">
+                    <a href="/articles/posts/" class="posts">Posts</a>
+                </li>
+                <li class="nav-link">
+                    <a href="/articles/posts" class="contact">Search</a>
+                </li>
+                <li class="nav-link">
+                    <a href="/articles/password/new/new" class="new">New Post</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-column">
+            <a href="/articles/password/login/login">
+                <div class="profile">
+                    <div class="profile-pic">
+                        <img class="profile-img" src="<%= user.filename%>" alt="">
+                    </div>
+                    <p class="user"><%= user.username %></p>
+                </div>
+            </a>
+            <div class="social text-gray">
+                <a href="https://www.facebook.com/profile.php?id=100069571806038"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/seesiish/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://mobile.twitter.com/liebert_samuel"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCOqBCouYjYVbEFUh8-vHicQ"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+    </div>
+    <script src="/Js/Jquery_3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $nav = $('.nav');
+            $toggleCollapse = $('.toggle-collapse');
+            console.log($toggleCollapse)
+            /** click event on toggle menu */
+            $toggleCollapse.click(function () {
+                $nav.toggleClass('collapse');
+            })
+        })
+    </script>
+</div>

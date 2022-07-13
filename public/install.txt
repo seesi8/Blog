@@ -1,0 +1,1 @@
+npm i express body-parser express-session uuid mongoose path method-override multer cors

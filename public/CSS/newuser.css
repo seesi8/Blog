@@ -1,0 +1,356 @@
+
+/*Fonts*/
+@import url('../CSS/Fonts.css');
+
+
+
+html, body{
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/*-Global Classes-*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Nunito_Sans);
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.
+    3rem;
+}
+
+h2{
+    font-family: var(--Red_Hat_Mono);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Roboto_Slab);
+    cursor: pointer;
+}
+
+.text-gray{
+    color: var(--text-gray)
+}
+
+:root{
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #68666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /*gradient color*/
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* theme font families*/
+    --IBM_Plex_Sans_Arabic:'IBM_Plex_Sans_Arabic',cursive;
+    --Merriweather:'Merriweather',cursive;
+    --Nunito_Sans:'Nunito_Sans',cursive;
+    --Red_Hat_Mono:'Red_Hat_Mono',cursive;
+    --Roboto_Slab:'Roboto_Slab',cursive;
+}
+
+span{
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+
+p{
+    font-family: var(--Nunito_Sans);
+    color: lightslategray;
+}
+
+@media only screen and (max-width:750px){
+    input.text{
+        padding: .5rem;
+        font-size: 1rem;
+        width: 100vw !important;
+        background: rgba(10, 20, 30, .5);
+        box-sizing: border-box;
+        border-color: white;
+        border-style: solid;
+        position: relative;
+        color: white;
+        z-index: 40 !important;
+        margin-top: .3rem;
+        margin-bottom: 4rem;
+        border-width: .2rem;
+    }
+    
+    textarea.text{
+        padding: .5rem;
+        font-size: 1rem;
+        width: 100vw !important;
+        background: rgba(10, 20, 30, .5);
+        box-sizing: border-box;
+        border-color: white;
+        border-style: solid;
+        position: relative;
+        border-radius: 1rem;
+        border-width: .2rem;
+        color: white;
+        z-index: 40 !important;
+        margin-top: .3rem;
+        margin-bottom: 4rem;
+        width: 75vh;
+        height: 14vh;
+    }
+
+    input[type="file" i]{
+        padding: .5rem;
+        font-size: 1rem;
+        width: 100vw !important;
+        background: rgba(10, 20, 30, .5);
+        box-sizing: border-box;
+        border-color: white;
+        border-style: solid;
+        position: relative;
+        color: white;
+        z-index: 40 !important;
+        margin-top: .2rem;
+        margin-bottom: 1.5rem;
+        border-width: .2rem;
+    }
+}
+/*-Global Classes-*/
+
+/*-Navbar-*/
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    display: block;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.6rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.collapse{
+    height: 30rem;
+}
+
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Merriweather);
+    font-size: 1.1rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 .2rem
+}
+
+
+/* Logo color*/
+.nav .social i.fa-facebook:hover{
+    color: #195ac3
+}
+
+.nav .social i.fa-instagram:hover{
+    color: #C13584
+}
+
+.nav .social i.fa-twitter:hover{
+    color: #3599c1
+}
+
+.nav .social i.fa-youtube:hover{
+    color: red
+}
+/* Logo color*/
+/*-Navbar-*/
+/*- main */
+
+
+
+main{
+    height: 100%;
+    text-align: center;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body{
+    background-image: url(/Assets/pexels-gdtography-911738.jpg);
+    background-repeat: repeat;
+    height: 100%;
+}
+
+
+
+input.text{
+    padding: .5rem;
+    font-size: 1rem;
+    width: 50vh;
+    background: rgba(10, 20, 30, .5);
+    box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    color: white;
+    z-index: 40 !important;
+    margin-top: .3rem;
+    margin-bottom: 4rem;
+    border-width: .2rem;
+}
+
+textarea.text{
+    padding: .5rem;
+    font-size: 1rem;
+    width: 50vh;
+    background: rgba(10, 20, 30, .5);
+    box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    border-radius: 1rem;
+    border-width: .2rem;
+    color: white;
+    z-index: 40 !important;
+    margin-top: .3rem;
+    margin-bottom: 4rem;
+    width: 75vh;
+    height: 14vh;
+}
+
+::placeholder{
+    color: white;
+    font-family: var(--Nunito_Sans);
+}
+
+label{
+    z-index: 99 !important;
+    position: relative;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: var(--sky);
+    margin-top: 3rem ;
+
+}
+
+.btn-submit{
+    background: var(--sky);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-radius: 3rem;
+}
+
+.btn-submit .Submit-btn{
+    background: transparent;
+    font-size: 2rem;
+}
+
+.btn-submit .Cancel-btn{
+    background: transparent;
+    font-size: 2rem;
+}
+
+input[type="file" i]{
+    padding: .5rem;
+    font-size: 1rem;
+    width: 50vh;
+    background: rgba(10, 20, 30, .5);
+    box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    color: white;
+    z-index: 40 !important;
+    margin-top: .2rem;
+    margin-bottom: 1.5rem;
+    border-width: .2rem;
+}
+
+input[type=file]::file-selector-button {
+    border: none;
+    border-radius: 1rem;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background: var(--sky);
+    transition: 1s;
+}
+
+.createbtn{
+    background: var(--sky);
+}
+
+/*main end*/

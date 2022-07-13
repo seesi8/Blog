@@ -1,0 +1,39 @@
+<% articles.forEach(article=> { %>
+    <div class='card'>
+      <a href='/articles/<%= article.slug %>' class='full'>
+        <div class='post-img'>
+          <img class='card-img' src='/images/<%= article.multerphoto %>'>
+        </div>
+        <div class='info-panel'>
+          <p>
+            <%= article.author%>
+          </p>
+        </div>
+      </a>
+
+
+      <div class='card-body'>
+        <a href='/articles/<%= article.slug %>' class='full'>
+          <h4 class='card-title'>
+            <%= article.title %>
+          </h4>
+        </a>
+        <div class='card-subtitle'>
+          <p>
+            <%= article.createdAt.toLocaleDateString() %>
+          </p>
+        </div>
+        <div class='card-text mb-2'>
+          <p>
+            <%= article.description %>
+          </p>
+        </div>
+        <div class=' read-more'>
+          <a href='/articles/<%= article.slug %>' class='btn'>Read More</a>
+        </div>
+
+      </div>
+    </div>
+
+
+<% }) %>

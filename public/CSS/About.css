@@ -1,0 +1,276 @@
+html, body{
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/*-Global Classes-*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Nunito_Sans);
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.
+    3rem;
+}
+
+h2{
+    font-family: var(--Red_Hat_Mono);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Roboto_Slab);
+    cursor: pointer;
+}
+
+.text-gray{
+    color: var(--text-gray)
+}
+
+:root{
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #68666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /*gradient color*/
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* theme font families*/
+    --IBM_Plex_Sans_Arabic:'IBM_Plex_Sans_Arabic',cursive;
+    --Merriweather:'Merriweather',cursive;
+    --Nunito_Sans:'Nunito_Sans',cursive;
+    --Red_Hat_Mono:'Red_Hat_Mono',cursive;
+    --Roboto_Slab:'Roboto_Slab',cursive;
+}
+
+span{
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+p{
+    font-family: var(--Nunito_Sans);
+    color: black !important; 
+    padding: 0rem 1rem;
+}
+/*-Global Classes-*/
+
+/*-Navbar-*/
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    display: block;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.6rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.collapse{
+    height: 30rem;
+}
+
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Merriweather);
+    font-size: 1.1rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 .2rem
+}
+/* Logo color*/
+.nav .social i.fa-facebook:hover{
+    color: #195ac3
+}
+
+.nav .social i.fa-instagram:hover{
+    color: #C13584
+}
+
+.nav .social i.fa-twitter:hover{
+    color: #3599c1
+}
+
+.nav .social i.fa-youtube:hover{
+    color: red
+}
+/* Logo color*/
+
+
+/*main*/
+.intro{
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 20rem auto;
+    height: 26rem;
+    background: gray;
+}
+
+.intro .photo .img{
+    width: 90%;
+    margin: 0 1;
+    padding: 0;
+}
+
+.intro .photo-info{
+    overflow-y: scroll;
+}
+
+.intro .photo-info .main-text{
+    padding-bottom: 3rem;
+}
+
+.carousel-img{
+    width: 90% !important;
+    height: 90%;
+    margin: 0rem;
+    position: relative;
+    padding: 0rem;
+}
+
+.owl-theme .about-photos {
+    margin: 1rem;
+    padding: 0rem;
+}
+
+.parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.owl-theme{
+    width: 0;
+    flex-basis: 100%;
+}
+
+.title{
+    padding: 1rem;
+}
+/*main*/
+/*viewport less then or equal to 1130px*/
+
+@media only screen and (max-width:1130px){
+
+}
+
+/*viewport less then or equal to 1130px*/
+/*viewport less then or equal to 1000px*/
+
+@media only screen and (max-width:1000px){
+    .intro{
+        grid-template-columns: auto;
+        height: auto;
+    }
+    .photo{
+        display: none;
+    }
+}
+
+/*viewport less then or equal to 10px*/
+
+/*viewport less then or equal to 750px*/
+
+@media only screen and (max-width:750px){
+    .nav .toggle-collapse{
+        display: initial;
+    }
+    .nav{
+        width: 100vw;
+    }
+    .description{
+        display: none;
+    }
+}
+
+
+/*viewport less then or equal to 750px*/
+
+
+/*viewport less then or equal to 520px*/
+
+@media only screen and (max-width:520px){
+
+}
+
+
+/*viewport less then or equal to 520px*/

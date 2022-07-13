@@ -1,0 +1,389 @@
+
+/*Fonts*/
+@import url('../CSS/Fonts.css');
+
+
+
+html, body{
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/*-Global Classes-*/
+.hide{
+    display: none;
+}
+
+
+.danger-parent{
+    margin: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+.danger-alert{
+    transition: opacity 0.6s;
+    background-color: rgb(244,67,54);
+    text-align: center;
+    width: auto;
+    padding: .5rem;
+    color: white;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+.danger-alert p{
+    display: inline-flex;
+    margin: 0%;
+    padding: 0%;
+    color: white;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+.danger-alert p:empty{
+    display: inline-flex;
+    margin: 0%;
+    padding: 0%;
+    color: white;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Nunito_Sans);
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.
+    3rem;
+}
+
+h2{
+    font-family: var(--Red_Hat_Mono);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Roboto_Slab);
+    cursor: pointer;
+}
+
+.text-gray{
+    color: var(--text-gray)
+}
+
+:root{
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #68666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /*gradient color*/
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* theme font families*/
+    --IBM_Plex_Sans_Arabic:'IBM_Plex_Sans_Arabic',cursive;
+    --Merriweather:'Merriweather',cursive;
+    --Nunito_Sans:'Nunito_Sans',cursive;
+    --Red_Hat_Mono:'Red_Hat_Mono',cursive;
+    --Roboto_Slab:'Roboto_Slab',cursive;
+}
+
+span{
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+
+p{
+    font-family: var(--Nunito_Sans);
+    color: lightslategray;
+}
+/*-Global Classes-*/
+
+/*-Navbar-*/
+
+.nav{
+    /*background: rgb(196, 230, 195);*/
+    background: var(--sky);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 7vh;
+    overflow: hidden;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    display: block;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.6rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.collapse{
+    height: 30rem;
+}
+
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+    padding-left: 11rem;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Merriweather);
+    font-size: 1.1rem;
+}
+
+ .social{
+    padding: 1.4rem 0;
+}
+
+ .social i{
+    padding: 0 .2rem
+}
+/* Logo color*/
+ .social i.fa-facebook:hover{
+    color: #195ac3
+}
+
+ .social i.fa-instagram:hover{
+    color: #C13584
+}
+
+ .social i.fa-twitter:hover{
+    color: #3599c1
+}
+
+ .social i.fa-youtube:hover{
+    color: red
+}
+/* Logo color*/
+.right-column{
+    display: flex;
+    align-items: center;
+}
+
+.profile{
+    padding-right: 3rem;
+    display: flex;
+}
+
+.user  {
+    align-self: center;
+    text-align: center;
+    position: relative;
+    padding-left: .5rem;
+}
+
+.profile-pic{
+    display: flex !important;
+    border-radius: 100% !important;
+    height: 6vh !important;
+    width: 6vh !important;
+    overflow: hidden;
+    justify-content: center;
+}
+.profile-img{
+    height: 100%;
+    width: 100%;
+}
+
+/*-Navbar-*/
+
+
+/*viewport less then or equal to 1130px*/
+
+@media only screen and (max-width:1130px){
+    
+}
+
+/*viewport less then or equal to 1130px*/
+
+/*viewport less then or equal to 750px*/
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu, .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+}
+
+
+/*viewport less then or equal to 750px*/
+
+
+/*viewport less then or equal to 520px*/
+
+@media only screen and (max-width:520px){
+
+}
+
+
+/*viewport less then or equal to 520px*/
+
+
+/*footer*/
+
+body{
+    min-height: 100vh;
+}
+footer.footer {
+    height: fit-content;
+    background: var(--bg-color);
+    position: relative;
+    bottom: 0;
+    margin-top: 15vh;
+}
+
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer.footer .container>div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2 {
+    color: White;
+}
+
+
+footer.footer .container .about-us p {
+    color: lightslategray;
+}
+
+footer.footer .newsletter .form-element {
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input {
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--Nunito_Sans);
+    font-size: 1rem;
+    width: 74%;
+}
+
+
+footer.footer .newsletter .form-element span {
+    background: var(--sky);
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div>img {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i {
+    color: white;
+    padding: 0.4rem;
+}
+
+footer.footer .rights {
+    justify-content: center;
+    font-family: var(--Merriweather);
+}
+
+footer.footer .rights h4 a {
+    color: white;
+}
+
+footer.footer .move-up {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span {
+    color: var(--midnight);
+}
+
+footer.footer .move-up span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/*footer*/

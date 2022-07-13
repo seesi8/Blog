@@ -1,0 +1,268 @@
+
+/* global */
+
+:root{
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #68666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /*gradient color*/
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* theme font families*/
+    --IBM_Plex_Sans_Arabic:'IBM_Plex_Sans_Arabic',cursive;
+    --Merriweather:'Merriweather',cursive;
+    --Nunito_Sans:'Nunito_Sans',cursive;
+    --Red_Hat_Mono:'Red_Hat_Mono',cursive;
+    --Roboto_Slab:'Roboto_Slab',cursive;
+}
+
+p{
+    color: black;
+    font-family: var(--Nunito_Sans);
+}
+/* global */
+
+
+
+
+/*- main */
+
+main{
+    height: 100%;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body{
+    background-color: whitesmoke;
+    /*background-image: url(/Assets/bg2.png);*/
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+input {
+    padding: .5rem;
+    font-size: 1rem;
+    width: 50vh;
+    background: rgba(10, 20, 30, .5);
+    box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    color: white;
+    z-index: 40 !important;
+    margin-top: .3rem;
+    margin-bottom: 4rem;
+    border-width: .2rem;
+}
+
+textarea {
+    padding: .5rem;
+    font-size: 1rem;
+    width: 50vh;
+    background: rgba(10, 20, 30, .5);
+    box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    border-radius: 1rem;
+    border-width: .2rem;
+    color: white;
+    z-index: 40 !important;
+    margin-top: .3rem;
+    margin-bottom: 4rem;
+    width: 75vh;
+    height: 15vh;
+}
+
+::placeholder{
+    color: white;
+    font-family: var(--Nunito_Sans);
+}
+
+label{
+    z-index: 99 !important;
+    position: relative;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: var(--sky);
+    margin-top: 3rem ;
+
+}
+
+.btn-submit{
+    background: var(--sky);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-radius: 3rem;
+}
+
+.btn-submit .Submit-btn{
+    background: transparent;
+    font-size: 2rem;
+}
+
+.btn-submit .Cancel-btn{
+    background: transparent;
+    font-size: 2rem;
+}
+
+h1.show-title{
+    color: black;
+}
+
+.description {
+    height: fit-content;
+    border-radius: 1rem;
+    width: 100%;
+    word-break: keep-all;
+}
+.title {
+    width: 100vw;
+
+    background-size: contain;
+    display: inline-flex;
+}
+.title-des{
+    padding: 1rem 2rem;
+    
+}
+
+img{
+    width: 50vw;
+    left: 0;
+    border-radius: 1rem;
+}
+
+.main-text{
+    text-align: center;
+}
+
+.title-child{
+    padding: 1rem 1rem;
+    height: fit-content;
+    vertical-align: top;
+}
+
+.body-text{
+    margin:  1rem 3rem;
+    margin-left: 4rem;
+    text-align: justify;
+}
+
+.title-img{
+    height: fit-content;
+    text-align: center;
+}
+
+.title-img .img-complications{
+    display: inline-flex;
+    padding: .7rem 1.5rem;
+    font-size: 1.5rem;
+    background: var(--sky);
+    border-radius: 2rem;
+}
+
+.complication{
+    margin: 0rem 1rem;
+} 
+
+.title-complications{
+    display: none;
+}
+
+.title-complications{
+    display: none;
+    padding: .5rem 1.5rem;
+    font-size: 1.5rem;
+    background: var(--sky);
+    border-radius: 2rem;
+}
+
+.fa-heart:hover{
+    color: red;
+}
+
+.fa-heart.fa-solid{
+    color: red;
+    animation: heart 0.5s linear;
+}
+
+@keyframes heart{
+    0%{
+        transform: rotate(0deg) scale(1.7);
+    }
+    40%{
+        transform: rotate(0deg) scale(1);
+    }
+    41%{
+        transform: rotate(360deg) scale(1);
+    }
+    100%{
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+/*main end*/
+
+
+/*viewport less then or equal to 1130px*/
+
+@media only screen and (max-width:1130px){
+    .img-title{
+        display: none;
+    }
+    .img-complications{
+        display: none !important;
+    }
+    .title-complications{
+        display: initial !important;
+    }
+}
+/*viewport less then or equal to 1130px*/
+
+/*viewport less then or equal to 750px*/
+
+@media only screen and (max-width:750px){
+    .nav .toggle-collapse{
+        display: initial;
+    }
+    .nav{
+        width: 100vw;
+    }
+    .description{
+        display: none;
+    }
+}
+
+
+/*viewport less then or equal to 750px*/
+
+
+/*viewport less then or equal to 520px*/
+
+@media only screen and (max-width:520px){
+
+}
+
+
+/*viewport less then or equal to 520px*/

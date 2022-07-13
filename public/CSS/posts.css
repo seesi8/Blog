@@ -1,0 +1,568 @@
+/*Fonts*/
+@import url('../CSS/Fonts.css');
+
+
+
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/*-Global Classes-*/
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: var(--Nunito_Sans);
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1. 3rem;
+}
+
+h2 {
+    font-family: var(--Red_Hat_Mono);
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Roboto_Slab);
+    cursor: pointer;
+}
+
+.text-gray {
+    color: var(--text-gray)
+}
+
+:root {
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #68666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /*gradient color*/
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* theme font families*/
+    --IBM_Plex_Sans_Arabic: 'IBM_Plex_Sans_Arabic', cursive;
+    --Merriweather: 'Merriweather', cursive;
+    --Nunito_Sans: 'Nunito_Sans', cursive;
+    --Red_Hat_Mono: 'Red_Hat_Mono', cursive;
+    --Roboto_Slab: 'Roboto_Slab', cursive;
+}
+
+span {
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+
+p {
+    font-family: var(--Nunito_Sans);
+    color: lightslategray;
+}
+
+@media only screen and (max-width:750px) {
+    input.text {
+        padding: .5rem;
+        font-size: 1rem;
+        width: 100vw !important;
+        background: rgba(10, 20, 30, .5);
+        box-sizing: border-box;
+        border-color: white;
+        border-style: solid;
+        position: relative;
+        color: white;
+        z-index: 40 !important;
+        margin-top: .3rem;
+        margin-bottom: 4rem;
+        border-width: .2rem;
+    }
+
+    textarea.text {
+        padding: .5rem;
+        font-size: 1rem;
+        width: 100vw !important;
+        background: rgba(10, 20, 30, .5);
+        box-sizing: border-box;
+        border-color: white;
+        border-style: solid;
+        position: relative;
+        border-radius: 1rem;
+        border-width: .2rem;
+        color: white;
+        z-index: 40 !important;
+        margin-top: .3rem;
+        margin-bottom: 4rem;
+        width: 75vh;
+        height: 14vh;
+    }
+
+    input[type="file"i] {
+        padding: .5rem;
+        font-size: 1rem;
+        width: 100vw !important;
+        background: rgba(10, 20, 30, .5);
+        box-sizing: border-box;
+        border-color: white;
+        border-style: solid;
+        position: relative;
+        color: white;
+        z-index: 40 !important;
+        margin-top: .2rem;
+        margin-bottom: 1.5rem;
+        border-width: .2rem;
+    }
+}
+
+/*-Global Classes-*/
+
+/*-Navbar-*/
+
+.nav {
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden;
+}
+
+.nav .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    display: block;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.6rem;
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+    color: white;
+}
+
+.collapse {
+    height: 30rem;
+}
+
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Merriweather);
+    font-size: 1.1rem;
+}
+
+.nav .social {
+    padding: 1.4rem 0;
+}
+
+.nav .social i {
+    padding: 0 .2rem
+}
+
+
+/* Logo color*/
+.nav .social i.fa-facebook:hover {
+    color: #195ac3
+}
+
+.nav .social i.fa-instagram:hover {
+    color: #C13584
+}
+
+.nav .social i.fa-twitter:hover {
+    color: #3599c1
+}
+
+.nav .social i.fa-youtube:hover {
+    color: red
+}
+
+/* Logo color*/
+/*-Navbar-*/
+
+/*cards*/
+
+body {
+    background-color: rgba(66, 66, 66, .1);
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    margin: 2vw;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 20rem auto;
+    margin-right: 4rem;
+}
+
+.card-body {
+    position: relative;
+    width: 100%;
+    padding: 0rem 0rem 1rem 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: .3rem 0rem;
+    font-family: var(--IBM_Plex_Sans_Arabic);
+}
+
+.card-subtitle p {
+    margin: .3rem 0rem;
+    padding: 0;
+    font-size: 1.1rem;
+    font-family: var(--Nunito_Sans);
+}
+
+.card-text p {
+    position: relative;
+    width: 100%;
+    color: var(--bg-color);
+    font-family: var(--Roboto_Slab);
+}
+
+.card-text {
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: .3rem 1.5rem;
+    font-size: 1rem;
+    font-family: var(--Roboto_Slab);
+    cursor: pointer;
+}
+
+.btn {
+    background: var(--sky);
+}
+
+.post-content>.post-image,
+.post-title {
+    background-size: cover;
+    padding: 0rem 2rem;
+    margin: 1rem 0rem;
+    position: relative;
+    justify-content: center;
+}
+.post-content {
+    width: 100%;
+    margin-left: 1rem;
+}
+.post-content>.post-image .img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 2s ease;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-img {
+    position: absolute;
+    width: 20rem;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.info-panel {
+    width: fit-content;
+    padding: .3rem;
+    display: inline-flex;
+    bottom: 0;
+    border-radius: 0 .5rem 0 0;
+    position: absolute;
+    background-color: whitesmoke;
+}
+
+.info-panel p {
+    padding: 0;
+    margin: 0 1rem;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.new-posts-title{
+    color: white;
+    text-align: center;
+}
+
+.sidebar a{
+   color: whitesmoke;
+}
+
+.sidebar .tags a{
+   color: var(--text-gray);
+}
+
+h2{
+    color: white;
+}
+
+/*cards-end*/
+main {
+    width: 100vw;
+    display: inline-flex;
+}
+
+
+.sidebar {
+    width: 100%;
+    justify-content: right;
+    float: right;
+    max-width: 25vw;
+}
+
+.new-posts{
+
+    width: 70%;
+}
+
+
+.search-bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    display: inline-flex;
+}
+
+body{
+    background-image: url(/Assets/pexels-karolina-grabowska-4814061.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+    height: 100%;
+}
+
+input.text{
+    padding: .5rem;
+    font-size: 1rem;
+    width: 50vh;
+    background: rgba(10, 20, 30, .5);
+    box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    color: white;
+    z-index: 40 !important;
+    margin-top: .3rem;
+    margin-bottom: 4rem;
+    border-width: .2rem;
+}
+
+
+.form-group{
+    margin: 0rem 1rem;
+    display: inline;
+}
+
+input.tags{
+    width: 15vh;
+}
+
+button{
+    background: var(--sky);
+}
+
+/* side bar */
+@media only screen and (max-width:950px) {
+    .sidebar{
+        display: none !important;
+    }
+    .new-posts{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:675px) {
+    .post-img{
+        display: none !important;
+    }
+    .info-panel{
+        display: none !important;
+    }
+    .card{
+        grid-template-columns: 100% !important;
+    }
+}
+
+
+.sidebar {
+    margin: 0rem 2rem;
+}
+
+.sidebar .category-list {
+    font-family: var(--Roboto_Slab);
+}
+
+.sidebar .category-list .list-items {
+    background: var(--sky);
+    padding: .4rem 1rem;
+    margin: .8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: .3rem 2rem;
+}
+
+.pagination .pages {
+    background: var(--text-gray);
+    color: white;
+}
+
+.pagination {
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 4rem 0;
+}
+
+.pagination a {
+    padding: .6rem .9rem;
+    border-radius: 2rem;
+    margin: 0 .3rem;
+    font-family: var(--Roboto_Slab);
+}
+
+.sidebar .category-list .list-items a {
+    color: black;
+}
+
+.sidebar .popular-post .post-content {
+    padding: 1rem 0;
+}
+
+.sidebar .popular-post h2 {
+    padding-top: 8rem;
+}
+
+.sidebar .popular-post .post-info {
+    padding: .4rem .1rem !important;
+    padding-bottom: 0;
+    bottom: 0rem !important;
+    left: 2rem !important;
+    border-radius: 0 !important;
+    position: absolute;
+    background: whitesmoke !important;
+}
+
+.post-content>.post-image .post-info span {
+    margin: 0.5rem;
+}
+
+.post-title a {
+    font-family: var(--IBM_Plex_Sans_Arabic);
+    font-size: 1.5rem;
+}
+
+
+.sidebar .popular-post .post-title a {
+    font-size: 1rem;
+}
+
+.sidebar .newsletter {
+    padding-top: 10rem;
+}
+
+.sidebar .newsletter .form-element {
+    padding: .5rem 2rem;
+}
+
+.sidebar .newsletter .input-element {
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-family: var(--Roboto_Slab);
+    font-size: 1rem;
+}
+
+.sidebar .newsletter .form-btn {
+    border-radius: 0;
+    padding: .8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+.sidebar .popular-tags {
+    padding: 5rem 0;
+
+}
+
+.sidebar .popular-tags .tags .tag {
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 3rem;
+    margin: .4rem .6rem;
+}
+
+/* side bar */
+/* main end */

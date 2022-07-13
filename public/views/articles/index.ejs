@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+
+    <!--Owl-Carousel-->
+    <link rel="stylesheet" href="/public/CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="/public/CSS/owl.theme.default.min.css">
+    <!-- Custom Style-->
+    <link rel="stylesheet" href="/public/CSS/Style.css">
+
+    <!--AOS Lib-->
+    <link rel="stylesheet" href="/public/CSS/aos.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="/public/CSS/all.css">
+    <link rel="stylesheet" href="/public/CSS/nav.css">
+
+</head>
+
+<body>
+
+    <!--Nav-->
+    <%-include('_nav')%>
+        <!-- Jquery Library File-->
+        <script src="/Js/Jquery_3.6.0.min.js"></script>
+        <script>
+            $nav = $('.nav');
+            $toggleCollapse = $('.toggle-collapse');
+
+            /** click event on toggle menu */
+            $toggleCollapse.click(function () {
+                $nav.toggleClass('collapse');
+            })
+        </script>
+
+        <!--Nav end-->
+
+        <!-- Main -->
+
+
+
+
+        <main>
+            <!-- Title-->
+            <section class="site-title">
+                <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Coding</h3>
+                    <h1>The Blog Adventure</h1>
+                    <a href="/articles/new_account"><button class="btn">Create Account</button></a>
+                </div>
+            </section>
+            <!--Title end-->
+
+            <!--Carosell-->
+
+            <section>
+                <div class="blog">
+                    <div class="container">
+                        <div class="owl-carousel owl-theme blog-post">
+                            <% articlespop.forEach(article=> { %>
+                                <div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+                                    <a href="/articles/<%= article.slug %>" class="full">
+                                        <div class="post-img">
+                                            <img class="card-img" src="/images/<%= article.multerphoto %>">
+                                        </div>
+                                    </a>
+                                    <div class="blog-title">
+                                        <a href="/articles/<%= article.slug %>" class="full">
+                                            <h4 class="card-title">
+                                                <%= article.title %>
+                                            </h4>
+                                        </a>
+                                        <button class="btn btn-blog">
+                                            <%= article.tags[0] %>
+                                        </button>
+                                        <span>2 minuits</span>
+                                    </div>
+                                </div>
+                                <% }) %>
+                        </div>
+                        <div class="owl-navigation">
+                            <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                            <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Carosell-->
+            <!--Site content-->
+
+            <section class="container">
+                <div class="site-content">
+                    <div class="posts">
+                        <% articlescreatedat.forEach(article=> { %>
+                            <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="post-image">
+                                    <div>
+                                        <img src="/images/<%=article.multerphoto%>" class="img img-post" alt="blog1">
+                                    </div>
+                                    <div class="post-info flex-row">
+                                        <span>
+                                            <i class="fas fa-user text-gray"></i>
+                                            &nbsp;&nbsp;<%= article.author %>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-calendar-alt text-gray"></i>
+                                            &nbsp;&nbsp;<%=article.createdAt.toLocaleDateString()%>
+                                        </span>
+                                        <span>
+                                            <i class="fa-solid fa-heart hide"></i>
+                                            &nbsp;&nbsp;<%= article.pop %>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="post-title">
+                                    <a href="#">
+                                        <%=article.title%>
+                                    </a>
+                                    <p>
+                                        <%=article.description%>
+                                    </p>
+                                    <button class="btn post-btn">Read More &nbsp; <i
+                                            class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                            <hr>
+                            <% }) %>
+                                <div class="pagination flex-row">
+                                    <a href="/?page=<%=parseInt(page)-1%>"><i class="fas fa-chevron-left"></i></a>
+                                    <a href="/?page=<%=parseInt(page)-1%>" class="pages pre-page"><%=parseInt(page)-1%></a>
+                                    <a href="" class="pages current-page"><%=page%></a>
+                                    <a href="/?page=<%=parseInt(page)+1%>" class="pages post-page"><%=parseInt(page)+1%></a>
+                                    <a href="/?page=<%=parseInt(page)+1%>"><i class="fas fa-chevron-right"></i></a>
+                                </div>
+                    </div>
+                    <aside class="sidebar">
+                        <div class="category-list">
+                            <h2>Category</h2>
+                            <!--style="width: <%=tags[2][1]*1%>rem; max-width: 20rem; min-width: 6rem;"*-->
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="100" >
+                                <a href="/articles/tag/<%=tags[0][0]%>"> <%=tags[0][0]%> </a>
+                                <span>(<%=tags[0][1]%>)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200" >
+                                <a href="/articles/tag/<%=tags[1][0]%>">  <%=tags[1][0]%> </a>
+                                <span>(<%=tags[1][1]%>)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="300" >
+                                <a href="/articles/tag/<%=tags[2][0]%>">  <%=tags[2][0]%> </a>
+                                <span>(<%=tags[2][1]%>)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="400" >
+                                <a href="/articles/tag/<%=tags[3][0]%>">  <%=tags[3][0]%> </a>
+                                <span>(<%=tags[3][1]%>)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500" >
+                                <a href="/articles/tag/<%=tags[4][0]%>">  <%=tags[4][0]%> </a>
+                                <span>(<%=tags[4][1]%>)</span>
+                            </li>
+                        </div>
+                        <div class="popular-post">
+                            <h2>Popular Post</h2>
+                            <% articlespop.forEach(article=> { %>
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div>
+                                            <img src="/images/<%= article.multerphoto%>" class="img" alt="blog1">
+                                        </div>
+                                        <div class="post-info flex-row">
+                                            <span>
+                                                <i class="fas fa-calendar-alt text-gray"></i>
+                                                &nbsp;&nbsp; <%=article.createdAt.toLocaleDateString()%>
+                                            </span>
+                                            <span>
+                                                <i class="fa-solid fa-heart hide"></i>
+                                                &nbsp;&nbsp;<%= article.pop %>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="post-title">
+                                        <a href="#"><%= article.title %></a>
+                                    </div>
+                                </div>
+                                <% }) %>
+                        </div>
+                        <div class="popular-tags" data-aos="fade-us" data-aos-delay="300">
+                            <h2>Popular tags</h2>
+                            <div class="tags flex-row">
+                                <span class="tag" data-aos="flip-us" data-aos-delay="100"><a href="/articles/tag/<%=tags[0][0]%>"><%=tags[0][0]%></a></span>
+                                <span class="tag" data-aos="flip-us" data-aos-delay="200"><a href="/articles/tag/<%=tags[1][0]%>"><%=tags[1][0]%></a></span>
+                                <span class="tag" data-aos="flip-us" data-aos-delay="300"><a href="/articles/tag/<%=tags[2][0]%>"><%=tags[2][0]%></a></span>
+                                <span class="tag" data-aos="flip-us" data-aos-delay="400"><a href="/articles/tag/<%=tags[3][0]%>"><%=tags[3][0]%></a></span>
+                                <span class="tag" data-aos="flip-us" data-aos-delay="500"><a href="/articles/tag/<%=tags[4][0]%>"><%=tags[4][0]%></a></span>
+                                <span class="tag" data-aos="flip-us" data-aos-delay="600"><a href="/articles/tag/<%=tags[5][0]%>"><%=tags[5][0]%></a></span>
+                                <span class="tag" data-aos="flip-us" data-aos-delay="700"><a href="/articles/tag/<%=tags[6][0]%>"><%=tags[6][0]%></a></span>
+                                <span class="tag" data-aos="flip-us" data-aos-delay="800"><a href="/articles/tag/<%=tags[7][0]%>"><%=tags[7][0]%></a></span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+            <!--Site content-->
+        </main>
+
+        <!-- Main end -->
+        <!-- Footer-->
+
+        <%- include('_footer')%>
+
+
+
+        <!-- Footer-->
+
+
+
+
+
+        <!-- Jquery Library File-->
+        <script src="/public/Js/Jquery_3.6.0.min.js"></script>
+
+        <!--Owl-Carousel-->
+        <script src="/public/Js/owl.carousel.min.js"></script>
+
+        <!--AOS Lib-->
+        <script src="/public/Js/aos.js"></script>
+
+        <!-- Custom Js-->
+        <script src="/public/Js/main.js"></script>
+
+        <script>
+            if(<%= page %>-1 <= 0){
+                $(".pre-page").toggleClass('hide')
+                $(".fa-chevron-left").toggleClass('hide')
+            }
+
+            if(<%= page %>+1 > <%= max %>){
+                $(".post-page").toggleClass('hide')
+                $(".fa-chevron-right").toggleClass('hide')
+            }
+        </script>
+
+</body>
+
+</html>
